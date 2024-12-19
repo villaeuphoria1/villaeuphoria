@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>villa-euphoria</title>
+    <link rel="icon" href="vee.jpg" type="image/x-icon">
+</head>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline-style: none;
+}
+
+html {
+    font-size: 12px;
+    color: #000;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --txtaccent: #fff;
+    --txtaccent1: #9D9D9F;
+    --textaccent2: #73757E;
+    --textaccent3: #484848;
+    --txtaccent4: black;
+    --txtaccent5: #E5E5E5;
+    --haccent_withOpacity: rgba(255, 203, 15,0.6);
+    --haccent2: #EDE8D0;
+    --bgaccent: #1A1C27;
+    --bgaccent_withOpacity: rgba(26, 28, 39,0.96);
+    --haccent: #EDE8D0;
+
+}
+.container{
+    width: 95%;
+    margin: 0px auto;
+    padding: 0px;
+}
+/* SECTION ZERO = LANDING VIEW */
+#sec-0{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(wow.jpeg) no-repeat top center/cover;
+}
+#sec-0 header.top {
+    background-color: var(--haccent);
+    font-size: 0.85rem;
+    color: var(--txtaccent4);
+    padding-top: 6px;
+}
+#sec-0 header.top .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#sec-0 header.top p {
+    display: flex;
+    width: 45%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0px;
+}
+#sec-0 header.top p:nth-of-type(2) {
+    justify-content: flex-end;
+}
+#sec-0 .top p::before{
+    font-family: fontAwesome;
+    display: inline-flex;
+    width: 2em;
+    justify-content: center;
+    font-size: 1.2em;
+}
+#sec-0 .top p:first-of-type::before{
+    content: "\f3cd";
+}
+#sec-0 .top p:nth-of-type(2)::before{
+    content: "\f0e0";
+}
+#sec-0 .top p:last-of-type::before{
+    content: "\f017";
+}
+#sec-0 .top .social {
+    display: flex;
+    width: 45%;
+    justify-content: flex-end;
+    gap: 5px;
+}
+#sec-0 .top .social a{
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 5px 0px 5px 5px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+#sec-0 .top .social a:hover{
+    transform: scale(1.15);
+    border-radius: 50px;
+}
+#sec-0 .top .social a img{
+    height: 1.2em;
+    margin-top: -5px;
+}
+#sec-0 header:last-of-type{
+    position: relative;
+    display: flex;
+}
+#sec-0 header:last-of-type .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0px;
+    position: relative;
+}
+#sec-0 header:last-of-type h1{
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--haccent);
+    padding: 0px;
+    margin: 0px;
+    animation-name: yassine;
+    animation-duration: 30s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+#sec-0 header:last-of-type h1>span{
+    color: var(--txtaccent);
+}
+#sec-0 header:last-of-type h1 p{
+    font-size: 0.85rem;
+    font-style: normal;
+    color: var(--textaccent2);
+    margin: 0px;
+}
+#sec-0 header label{
+    color: var(--haccent);
+    font-size: 2rem;
+}
+#sec-0 header nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+    animation-name: khadija;
+    animation-duration: 30s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+#sec-0 header nav a:hover{
+    background-color: #73757E;
+    transition: background-color 1.5s ease;
+    text-decoration: underline;
+    color: white;
+    border-radius: 20px;
+    border-top: 3px solid black;
+    border-bottom: 1px solid cyan; 
+    transition:all 10s ease;
+}
+.wahwah a :hover{
+    box-shadow:0px 1px 5px #FFCB0F;
+}
+.show{
+    display: flex;
+}
+.hide{
+    display: none;
+}
+
+#sec-0 header input {
+    display: none;
+}
+#sec-0 input + nav {
+    display: none;
+    width: 100%;
+}
+#sec-0 input:checked + nav {
+    display: block;
+}
+#sec-0 article{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0px;
+}
+#sec-0 article h1{
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: var(--txtaccent);
+    margin-bottom: 10px;
+}
+#sec-0 article h2{
+    text-transform: uppercase;
+    font-size: 1.85rem;
+    color: var(--txtaccent);
+    line-height: 1em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+#sec-0 article h2 span{
+    color: var(--haccent);
+}
+#sec-0 article p{
+    color: var(--txtaccent);
+    margin-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+#sec-0 article a{
+    color: var(--haccent2);
+    background-color: var(--txtaccent4);
+    display: inline-block;
+    padding: 8px 15px;
+    margin-left: 5px;
+    border: solid 1px var(--haccent2);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#sec-0 article a:hover{
+    background-color: var(--haccent2);
+    color: var(--txtaccent);
+}
+/* SECTION ONE */
+#sec-1 {
+    background-color: var(--txtaccent);
+}
+#sec-1 article{
+    padding-top: 20px;
+    text-align: center;
+}
+#sec-1 article h1{
+    font-size: 1.85rem;
+    color: #1A1C27;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#sec-1 article h2{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--textaccent3);
+}
+#sec-1 article p{
+    font-size: 0.85rem;
+    text-align: justify;
+    margin: 1.3rem 0px 1.1rem;
+}
+#sec-1 article a{
+    color: var(--txtaccent);
+    background-color: var(--haccent);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
+}
+#sec-1 aside {
+    width: 95%;
+    margin: 25px auto 0px;
+}
+#sec-1 aside img{
+    max-width: 100%;
+}
+
+#sec-2{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(sport.jpeg) no-repeat center center/cover;
+    text-align: center;
+    padding: 3rem 0px 1.8rem;
+}
+#sec-2 .container>h1{
+    color: var(--haccent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+#sec-2 .container>p {
+    color: var(--txtaccent);
+    margin-bottom: 30px;
+}
+#sec-2 article{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#sec-2 article figure{
+    text-align: center;
+    max-width: 63%;
+    margin-top: 40px;
+}
+#sec-2 article .cont{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    border-radius: 10px;
+    padding: 95px 10px 20px;
+    text-align: center;
+    margin-top: -75px;
+}
+#sec-2 article figure div:first-of-type{
+    width: 10em;
+    height: 10em;
+    background-color: var(--haccent2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    position: relative;
+    z-index: 1;
+}
+#sec-2 article figure img{
+    max-width: 55%;
+}
+#sec-2 article figure h2{
+font-size: 1.2rem;
+text-transform: uppercase;
+font-weight: 700;
+margin-bottom: 10px;
+color: var(--haccent2);
+}
+#sec-2 article figure p{
+color: var(--txtaccent);
+font-size: 0.88rem;
+text-shadow:1px 1px #73757E;
+}
+
+#sec-3{
+    background-color: var(--txtaccent);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#sec-3 h1{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--bgaccent);
+    font-weight: 900;
+}
+#sec-3 .cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: space-around;
+}
+#sec-3 .card{
+    width: 25%;
+    margin-bottom: 30px;
+}
+#sec-3 .card p{
+    text-align: justify;
+    word-break: break-all;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+#sec-3 .card>div{
+    position: relative;
+}
+#sec-3 .caption{
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    color: var(--txtaccent);
+    background-color: rgba(0,0,0,0.65);
+    padding: 8px 15px 15px;
+    position: absolute;
+    bottom: 0px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+#sec-3 a{
+    color: var(--txtaccent);
+    background-color: var(--haccent);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+/* SECTION 4 */
+#sec-4{
+    background: linear-gradient(rgba(78, 76, 70, 0.8),rgba(78, 76, 70, 0.8)), url(wow3.jpeg) no-repeat center center/cover;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+#sec-4 h1{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-bottom: 1.6rem;
+    color: var(--txtaccent);
+    font-weight: 800;
+}
+#sec-4 p{
+    color: var(--txtaccent);
+    font-size: 0.9rem;
+    padding: 0px 6rem;
+    margin-bottom: 2rem;
+}
+#sec-4 .filter{
+    margin-bottom: 2rem;
+    padding: 0px 6rem;
+}
+#sec-4 .filter a{
+    display: inline-block;
+    padding: 3px 20px 5px;
+    border-radius: 15px;
+    color: var(--txtaccent);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.65s ease;
+    font-size: 0.85rem;
+}
+#sec-4 .filter a:hover{
+    background-color: var(--bgaccent);
+}
+#sec-4 .cont{
+    width: 90%;
+    margin: 0px auto;
+}
+#sec-4 .cont>img{
+    width: 100%;
+    display: block;
+    margin: 0px auto 20px;
+}
+#sec-4 aside{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#sec-4 aside img{
+    margin-bottom: 10px;
+    width: 48%;
+}
+/* SECTION 5 */
+#sec-5{
+    background: url(../Images/bg3.jpg) no-repeat center center/cover;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+}
+#sec-5 h1{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-bottom: 1.6rem;
+    color: var(--txtaccent4);
+    font-weight: 800;
+}
+#sec-5 h1+p{
+    color: var(--txtaccent4);
+    padding: 0px 2rem;
+    margin-bottom: 4rem;
+}
+#sec-5 p{
+    font-size: 17px;
+}
+#sec-5 .cont{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 5vh;
+}
+#sec-5 article{
+    width: 70%;
+}
+#sec-5 .quotetxt{
+    display: flex;
+    align-items: stretch;
+    padding: 1.8em 1.7em 2em 1em;
+    background-color: var(--txtaccent5);
+    text-align: justify;
+    word-break: break-all;    
+    position: relative;
+}
+#sec-5 .quotetxt p:first-child{
+    padding-right: 0.7em;
+}
+#sec-5 .quotetxt p:first-child img{
+    min-width: 100%;
+}
+#sec-5 .quotetxt p:last-child{
+    padding-top: 3px;
+}
+#sec-5 .arrow:after {
+    content: '';
+    position: absolute;
+    border: 15px solid transparent;
+    border-top-color: var(--txtaccent5);
+    left: calc(50% - 15px);
+    top: 100%;
+}
+#sec-5 figure{
+    margin-top: 1.85rem;
+}
+#sec-5 .customer{
+    display: block;
+    margin: 0px auto;
+    border-radius: 50%;
+}
+#sec-5 figcaption{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow:1px 1px #73757E;
+}
+#sec-5 article:nth-of-type(2) div.quotetxt{
+    color: var(--txtaccent);background-color: var(--haccent);
+}
+#sec-5 article:nth-of-type(2) .arrow:after{
+    border-top-color: var(--haccent);
+}
+#sec-5 .contactUs{
+    padding-top: 1.5rem;
+    background-color: var(--haccent_withOpacity);
+    border-bottom: solid 2rem var(--textaccent3);
+}
+#sec-5 .contactUs h1{
+    color: var(--textaccent3);
+    text-transform: uppercase;
+    font-size: 1.52rem;
+    font-weight: 800;
+    margin: 0px;
+}
+#sec-5 .contactUs h2{
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0px;
+}
+#sec-5 .contactUs form{
+    padding: 10px 0px 1.7rem;
+    position: relative;
+}
+#sec-5 .contactUs form input{
+    padding: 6px 15px;
+    margin: 0px 5px 10px 0px;
+    border-radius: 6px;
+    border-style: none;
+    color: var(--textaccent3);
+}
+#sec-5 .contactUs form input[type=submit]{
+    padding: 6px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: var(--textaccent3);
+    color: var(--txtaccent5);
+}
+#sec-5 .contactUs form input:focus{
+    box-shadow: inset 0px 0px 10px var(--txtaccent1);
+}
+#sec-5 .contactUs form input[type=submit]:hover{
+    box-shadow: inset 0px 0px 10px var(--txtaccent1);
+}
+#sec-5 .contactUs form input+p{
+    width: 100%;
+    margin: 0px auto;
+    color:#ff0000;
+    font-style: italic;
+    font-size: 0.8rem;
+    line-height: 1.1em;
+    padding: 0px 6px;
+    position: absolute;
+    bottom: 2px;
+}
+.invalid{
+    box-shadow: inset 0px 0px 10px #e67a7a;
+}
+/* SECTION SIX */
+#sec-6{
+    background: linear-gradient(rgba(0, 0, 0,0.9),rgba(0, 0, 0,0.9)), url(../Images/rascacielos-nueva-york.jpg) no-repeat center center/cover;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    font-size: 0.8rem;
+}
+#sec-6 .container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+    color: var(--txtaccent5);
+}
+#sec-6 h1{
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 1.1rem;
+}
+#sec-6 .about h2{
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--haccent);
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+}
+#sec-6 .about h2 p{
+    color: var(--txtaccent1);
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+#sec-6 .about>p{
+    margin-bottom: 1.5rem;
+}
+#sec-6 .about a{
+    display: inline-flex;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: var(--haccent);
+    font-size: 1.25rem;
+    color: var(--bgaccent);
+    justify-content: center;
+    align-items: center;
+    transition: background-color ease-in;
+    margin-top: 5px;
+    text-decoration: none;
+}
+#sec-6 .about i{
+    vertical-align: baseline;
+}
+#sec-6 .about a:hover{
+    background-color: var(--txtaccent5);
+}
+#sec-6 .links a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+#sec-6 .links a{
+    position: relative;
+    padding: 0.2em;
+    padding-left: 25px;
+}
+#sec-6 .links a::before{
+    content: '';
+    position: absolute;
+    border: 0.35em solid transparent;
+    border-left-color: var(--txtaccent5);
+    left: 0px;
+    top: 0.8em;
+}
+#sec-6 .links a:hover{
+    text-decoration: underline;
+}
+#sec-6 .posts a{
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 1.1em;
+    transition: background-color 0.7s ease-out;
+    margin-left: -5px;
+}
+#sec-6 .posts a:hover{
+    background-color: var(--haccent_withOpacity);
+    color: var(--txtaccent);
+}
+#sec-6 .posts a span{
+    display: inline-flex;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    border: solid 2px var(--txtaccent5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    margin-right: 10px;
+}
+#sec-6 .contact p{
+    margin-bottom: 15px;
+    display: flex;
+    margin-left: -1em;
+}
+#sec-6 .contact p::before{
+    font-family: fontAwesome;
+    display: inline-flex;
+    min-width: 2em;
+    justify-content: center;
+    font-size: 1.2em;
+}
+#sec-6 .contact p:first-of-type::before{
+    content: "\f3c5";
+}
+#sec-6 .contact p:nth-of-type(2)::before{
+    content: "\f0e0";
+}
+#sec-6 .contact p:last-of-type::before{
+    content: "\f3cd";
+}
+/* SECTION SEVEN */
+#sec-7 {
+    background-color: var(--bgaccent);
+    padding: 20px 0px 10px;
+    text-align: center;
+    font-size: 0.7rem;
+}
+#sec-7 p{
+    color: var(--txtaccent5);
+}
+#sec-7 p span{
+    color: var(--haccent);
+}
+.ana {
+    background-color: #1A1C27;
+    animation-name: spin;
+    animation-duration: 30s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+.me {
+    display: flex;
+    flex-direction: row;
+    animation-name: mom;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+.top {
+    animation-name: spin;
+    animation-duration: 30s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+.container {
+    animation-name: yassine;
+    animation-duration: 30s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+.container {
+    animation-name: mom;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+.you {
+    animation-name: asmae;
+    animation-duration: 30s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+/*MEDIA QUERRIES*/
+/*Smart phones */
+@media (min-width: 576px) {
+    html{
+        font-size: 13px;
+    }
+    .container {
+        width: 520px;
+    }
+    #sec-0 header nav a {
+        background-color: transparent;
+    }
+    .me {
+        display: flex;
+        flex-direction: row;
+    }
+    .me a :hover {
+        margin: 5px;
+        background-color: #C79E23;
+    }
+    #sec-0 input + nav {
+        background-color: var(--bgaccent_withOpacity);
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        width: 35%;
+        border-bottom-left-radius: 10px;
+    }
+    #sec-0 #searchBox {
+        transform: translateY(25px);
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    .container {
+        width: 720px;
+    }
+    #sec-0 header.top {
+        padding-top: 0px;
+    }
+    #sec-0{
+        background-position: center center;
+    }
+    #sec-0 header.top .container {
+        justify-content: flex-start;
+    }
+    #sec-0 header.top p {
+        width: fit-content;
+        margin-right: 10px;
+    }
+    #sec-0 .top .social {
+        width: fit-content;
+        flex-grow: 1;
+    }
+    #sec-0 header label{
+        display: none;
+    }
+    #sec-0 header nav a {
+        border-style: none;
+    }
+    #sec-0 input + nav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        width: fit-content;
+        position: static;
+        border-radius: none;
+        font-size: 0.8rem;
+    }
+    #sec-0 input:checked + nav {
+        display: flex;
+    }
+    #sec-0 article{
+        padding: 5rem 0px;
+    }
+    #sec-0 article h1{
+        font-size: 2rem;
+    }
+    #sec-0 article h2{
+        font-size: 3.5rem;
+    }
+    #sec-0 #searchBox {
+        min-width: 35%;
+    }
+    #sec-1 .container{ 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #sec-1 article{
+        padding: 0px;
+        text-align: left;
+        width:51%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    #sec-1 article p{
+        padding-right: 1rem;
+    }
+    #sec-1 aside {
+        width: 48%;
+        margin: 0px;
+        text-align: right;
+    }
+    #sec-2{
+        padding: 4rem 0px 2.5rem;
+    }
+    #sec-2 article{
+        justify-content: space-between;
+    }
+    #sec-2 article figure{
+        max-width: 40%;
+    }
+    #sec-2 article figure img{
+        max-width: 55%;
+    }
+    #sec-3 {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #sec-3 .cont{
+        flex-direction: row;
+    }
+    #sec-3 .card{
+        width: 48%;
+    }
+    #sec-3 .card:last-child{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #sec-4 .cont{
+        width: 100%;
+        margin: 0px;
+    }
+    #sec-4 aside img{
+        margin-bottom: 15px;
+        width: 48%;
+    }
+    #sec-5 h1+p{
+        padding: 0px 6rem;
+    }
+    #sec-5 .cont{
+        gap: 5vw;
+    }
+    #sec-5 article{
+        width: 43%;
+    }
+    #sec-5 .contactUs form input+p{
+        bottom: 4px;
+    }
+    #sec-6 .container{
+        justify-content: space-between;
+        row-gap: 25px;
+    }
+    #sec-6 .about{
+        width: 65%;
+    }
+    #sec-6 .links{
+        width: 20%;
+    }
+    #sec-6 .posts {
+        width: 65%;
+    }
+    #sec-6 .contact {
+        width: 20%;
+    }
+}
+/* Standard PC screens */
+@media (min-width: 1200px) {
+    html{
+        font-size: 15px;
+    }
+    .container {
+        width: 1140px;
+    }
+    #sec-0 .top .social {
+        gap: 10px ;
+    }
+    #sec-0 header:last-of-type .container{
+        padding: 0.95rem 0px;
+    }
+    #sec-0 header nav a {
+        margin-right: 10px;
+        font-size: 0.92rem;
+    }
+    #sec-0 article p{
+        padding-left: 14rem;
+        padding-right: 14rem;
+    }
+    #sec-1 article h1{
+        font-size: 2.7rem;
+    }
+    #sec-1 article h2{
+        font-size: 1.8rem;
+    }
+    #sec-2{
+        background-position: center top;
+    }
+    #sec-2 article{
+        justify-content: space-evenly;
+    }
+    #sec-2 article figure{
+        max-width: 21%;
+    }
+    #sec-3 {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+    #sec-3 .card{
+        width: 31%;
+    }
+    #sec-3 .card:last-child{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #sec-4 .cont{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    #sec-4 .cont>img{
+        width: 50%;
+        margin: 0px;
+    }
+    #sec-4 aside{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 49%;
+        gap: 10px;
+    }
+    #sec-4 aside img{
+        width: 49%;
+        margin: 0px;
+    }
+    #sec-5{
+        background-position: right center;
+    }
+    #sec-5 .cont{
+        justify-content: space-between;
+        gap: 0px;
+        padding-bottom: 25px;
+    }
+    #sec-5 article{
+        width: 30%;
+    }
+    #sec-5 .contactUs>.container {
+        display: flex;
+        justify-content: space-between;
+    }
+    #sec-5 .contactUs aside{
+        width: 45%;
+        text-align: left;
+    }
+    #sec-5 .contactUs form {
+        width: 45%;
+        padding-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #sec-5 .contactUs form input {
+        margin-right: 15px;
+    }
+    #sec-5 .contactUs form input:not(input[type=submit]) {
+        flex-grow: 1;
+    }
+    #sec-5 .contactUs form input+p{
+        text-align: left;
+    }
+    #sec-6 .container{
+        justify-content: space-between;
+        row-gap: 25px;
+    }
+    #sec-6 .about{
+        width: 30%;
+    }
+    #sec-6 .links{
+        width: 15%;
+    }
+    #sec-6 .posts {
+        width: 20%;
+    }
+    #sec-6 .contact {
+        width: 18%;
+    }
+}
+@media (min-width: 1400px) {
+    html{
+        font-size: 17px;
+    }
+    .container {
+        width: 1340px;
+    }
+}
+.hahaha {
+    position: relative;
+    top: 2px;
+}
+  .card-img-top {
+    width: 70%; /* تحديد عرض الصورة كنسبة مئوية */
+    height: auto; /* الحفاظ على النسبة بين العرض والطول */
+  }
+  .card-img-top1 {
+    width: 78%; /* تحديد عرض الصورة كنسبة مئوية */
+    height: auto; /* الحفاظ على النسبة بين العرض والطول */
+  
+  }
+  .card-img-top2 {
+    width: 68%; /* تحديد عرض الصورة كنسبة مئوية */
+    height: auto; /* الحفاظ على النسبة بين العرض والطول */
+  }
+
+
+</style>
+<body>
+    <section id="sec-0">
+        <header class="top">
+            <div class="container">
+                <p>0600-0000-00</p>
+                
+                <p>7/7 days - 24/24 hours</p>
+                <div class="social">
+                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#"><i class="fa-solid fa-basketball"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><img src="c:\Users\hp\Desktop\Images\banner.jpg c:\Users\hp\Desktop\Images\bg2.jpg c:\Users\hp\Desktop\Images\bg3.jpg c:\Users\hp\Desktop\Images\bg4.jpg c:\Users\hp\Desktop\Images\block-ico1.png c:\Users\hp\Desktop\Images\block-ico2.png c:\Users\hp\Desktop\Images\block-ico22.png c:\Users\hp\Desktop\Images\blockquote1.png c:\Users\hp\Desktop\Images\blockquote2.png c:\Users\hp\Desktop\Images\card1.jpg c:\Users\hp\Desktop\Images\card2.jpg c:\Users\hp\Desktop\Images\card3.jpg c:\Users\hp\Desktop\Images\cust1.png c:\Users\hp\Desktop\Images\gallery1.jpg c:\Users\hp\Desktop\Images\gallery2.jpg c:\Users\hp\Desktop\Images\gallery3.jpg c:\Users\hp\Desktop\Images\gallery4.jpg c:\Users\hp\Desktop\Images\gallery5.jpg c:\Users\hp\Desktop\Images\ico1.png c:\Users\hp\Desktop\Images\ico2.png c:\Users\hp\Desktop\Images\ico3.png c:\Users\hp\Desktop\Images\ico4.png c:\Users\hp\Desktop\Images\img1.png c:\Users\hp\Desktop\Images\index.html c:\Users\hp\Desktop\Images\plain-grey.jpg c:\Users\hp\Desktop\Images\rascacielos-nueva-york.jpg c:\Users\hp\Desktop\Images\README.md c:\Users\hp\Desktop\Images\styles.css c:\Users\hp\Desktop\Images\youtube-logotype.png" alt=""></i></a>
+                </div>
+            </div>
+        </header>
+        <header class="ana">
+            <div class="hide" id="searchBar">
+                <input type="search" name="searchBox" id="searchBox" placeholder="Type your search here..    Press [Esc] to exist">
+            </div>
+            <div class="container">  
+                <h1>
+                    <span>Villa</span>euphoria
+                    <p class="you">the best destination for your holiday</p>
+                </h1>
+                <div class="meme">
+                <nav class="me">
+                    <a href="https://www.instagram.com/villa_euphoria_marrakech/profilecard/?igsh=MTdqMGsxdXFhcGs2ZA==">Instagram</a>
+                    
+                    <a href="media.html">Pictures</a>
+                    
+                    <a href="info.html">Privacy</a>
+                    <a href="betty💕.vcf">Contact</a>
+                </nav>
+                </div>
+            </div>
+        </header>
+        <article>
+        <div class="container">
+            <h1> We are a trusted</h1>
+            <h2>and<br>
+            <span>experienced rent</span></h2>
+            <p> Welcome to our villa, your perfect getaway destination! We are passionate homeowners who take pride in offering a unique and memorable stay for our guests. Our villa reflects our dedication to comfort, elegance, and hospitality, making it an ideal choice for your next vacation or extended stay. Nestled in a prime location, our villa is designed to provide a serene and luxurious environment for relaxation and enjoyment. Whether you’re seeking a peaceful retreat or a place to gather with loved ones, our property caters to a variety of needs.</p>
+            <nav class="wahwah">
+            <a href="#">Show More</a>
+            <a href="#">view project</a>
+            </nav>
+        </div>
+        </article>
+    </section>
+    <section id="sec-1">
+        <div class="container">
+            <article>
+                <h1>Welcome to our villa</h1>
+                <h2>our services.</h2>
+                 <p>At our company, we pride ourselves on offering top-notch services to meet the diverse needs of our clients. We specialize in villa rentals, providing a seamless and reliable experience from start to finish. Our team is committed to delivering quality with every booking, ensuring that each villa meets high standards of comfort and luxury.
+
+                    We understand the importance of timeliness and professionalism, which is why we are always on time and ready to assist. Whether you're seeking a peaceful getaway or a luxurious retreat, our professional services guarantee satisfaction and a stress-free experience. Your trust in us is our top priority, and we are dedicated to making your villa rental experience unforgettable.</p>
+               
+            </article>
+            <aside class="hahaha"><img src="kays.jpeg" alt="man" height="350" width="1000"></aside>
+        </div>
+    </section>
+    <section id="sec-2">
+        <div class="container">
+            <h1> why choose us?</h1>
+            <P>Our commitment to trust and transparency ensures a reliable and seamless experience when renting villas, delivering quality and satisfaction to our clients.</P>
+            <article>
+                <figure>
+                    <div><img src="ico1.png" alt=""></div>
+                    <div class="cont">
+                        <h2>we deliver quality</h2>
+                        <p>We deliver quality and trust in villa rentals, ensuring a seamless and reliable experience for all our clients.<br><br><br><br></p>
+                    </div>
+                </figure>
+                <figure>
+                    <div><img src="ico2.png" alt=""></div>
+                    <div class="cont">
+                        <h2>Always on time</h2>
+                        <p>We deliver quality, always on time, ensuring a reliable and seamless experience for our clients when renting villas.<br><br><br></p>
+                    </div>
+                </figure>
+                <figure>
+                    <div><img src="ico3.png" alt=""></div>
+                    <div class="cont">
+                        <h2>we are passionate</h2>
+                        <p>We are passionate about delivering quality, always on time, ensuring a reliable and seamless experience for our clients when renting villas.<br><br><br></p>
+                    </div>
+                </figure>
+                <figure>
+                    <div><img src="ico4.png" alt=""></div>
+                    <div class="cont">
+                        <h2>proffesional services</h2>
+                        <p>We are passionate about delivering professional services, providing quality, always on time, and ensuring a reliable and seamless experience for our clients when renting villas.</p>
+                    </div>
+                </figure>
+            </article>
+        </div>
+    </section>
+    <section id="sec-3">
+        <div class="container">
+            <h1>our services</h1>
+            <div class="cont">
+                <div class="card border-0">
+                    
+                    <div>
+                        <img src="chef.png" class="card-img-top" alt="...">
+                        <h5 class="caption">Chef</h5>
+                    </div>
+                    <div class="card-body px-0 pt-4">
+                        <p>A skilled Moroccan chef specializing in authentic dishes like tagines, couscous, and pastilla, showcasing the rich flavors and heritage of Moroccan cuisine.</p>
+                        
+                    </div>
+                </div>
+           
+                <div class="card border-0">
+                    
+                    <div>
+                        <img src="ccc.png" class="card-img-top1" alt="...">
+                        <h5 class="caption">Cleaner</h5>
+                    </div>
+                    <div class="card-body px-0 pt-4">
+                     <p>A dedicated cleaner with excellent attention to detail,
+                         skilled in maintaining cleanliness and organization 
+                         in various environments, 
+                         ensuring a hygienic and welcoming space.</p>
+                     
+                    </div>
+                </div>
+                
+            
+                <div class="card border-0">
+                    <div>
+                        <img src="gar.png" class="card-img-top2" alt="...">
+                        <h5 class="caption">Guard</h5>
+                    </div>
+                    <div class="card-body px-0 pt-4">
+                        <p>A reliable guard committed to ensuring safety and security, skilled in monitoring premises, preventing unauthorized access, and responding effectively to incidents.</p>
+                        
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec-4">
+        <div class="container">
+            <h1>An Unforgettable Experience Awaits</h1>
+            <p>"An Unforgettable Experience Awaits, where every moment is designed to leave a lasting impression."</p>
+            <div class="filter">
+               
+            </div>
+          
+        </div>
+    </section>
+    <section id="sec-5">
+        <div class="container">
+            <h1>the villa</h1>
+            <p>This luxurious villa features 5 spacious suites and 2 additional bedrooms, offering a perfect blend of comfort and elegance. It is equipped with a relaxing jacuzzi, ideal for unwinding, and a fully equipped gym for those who wish to stay active. Whether you're seeking relaxation or recreation, this villa provides an exceptional experience tailored to your every need.</p>
+            </div>
+        </div>
+       
+    </section>
+    <section id="sec-6">
+        <div class="container">
+            <div class="about">
+                <h1>About Company</h1>
+                <h2>
+                    VILLA EUPHORIA
+                    <p>the best destination for your holiday.</p>    
+                    <h4>If you encounter any problems, contact us via social media or WhatsApp.</h4>     
+                </h2>   
+            </div>
+            <div class="links">
+                <h1>Explor links</h1>
+                <a href="media.html">Pictures</a>
+                <a href="c:\Users\hp\Desktop\villa bouthaina\Satmokadik ..vcf">Meet our team</a>
+                <a href="https://www.instagram.com/villa_euphoria_marrakech/profilecard/?igsh=MTdqMGsxdXFhcGs2ZA==">instagram</a>
+                <a href="c:\Users\hp\Desktop\villa bouthaina\betty💕.vcf">Contact Us</a>
+                <a href="info.html">Privacy Policy</a>
+            </div>
+           
+            <div class="contact">
+                <h1>Contact us</h1>
+                <p>Morocco ,marrakech</p>
+                <p>+212 700717070<br></p>
+
+            </div>
+        </div>
+    </section>
+    <section id="sec-7">
+        <div class="container">
+            <p>Copyright @2025 | Designed by <span>yassine web team</span></p>
+        </div>
+    </section>
+
+    
+</body>
+</html>
